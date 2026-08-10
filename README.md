@@ -219,8 +219,6 @@ Proyecto-de-grado---cristal-de-plomo/
 └── ...
 ```
 
-> La estructura anterior puede adaptarse a la organización definitiva del repositorio.
-
 ---
 
 ## Motivación
