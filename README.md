@@ -202,7 +202,7 @@ The analyzed quantities include:
 ## Project Structure
 
 ```text
-Project-de-grado---lead-glass/
+Lead-Glass-Cherenkov-Detector/
 │
 ├── Crystalg4/
 │   └── Geant4 simulation code
