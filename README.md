@@ -1,101 +1,101 @@
-# Proyecto de Grado — Detector Cherenkov de Cristal de Plomo
+# Undergraduate Thesis — Lead Glass Cherenkov Detector
 
-## Descripción
+## Description
 
-Este repositorio contiene el desarrollo de mi proyecto de grado, centrado en la **simulación y análisis de la respuesta de un fotomultiplicador (PMT) asociado a un detector Cherenkov de cristal de plomo**.
+This repository contains the development of my undergraduate thesis, focused on the **simulation and analysis of the response of a photomultiplier tube (PMT) coupled to a lead glass Cherenkov detector**.
 
-El objetivo principal del proyecto es **analizar y caracterizar la señal producida por el PMT** a partir de eventos simulados, estudiando la relación entre las partículas que atraviesan el detector, los fotones Cherenkov producidos y la señal finalmente observada por el fotomultiplicador.
+The main objective of this project is to **analyze and characterize the signal produced by the PMT** from simulated events, studying the relationship between the particles passing through the detector, the Cherenkov photons produced, and the signal ultimately observed by the photomultiplier.
 
-El proyecto combina **simulación de física de partículas, procesamiento de datos y análisis científico**, utilizando principalmente Geant4, ROOT y Python.
-
----
-
-## Objetivos
-
-Los principales objetivos del proyecto son:
-
-* Simular la interacción de partículas con un detector Cherenkov de cristal de plomo.
-* Estudiar la producción y propagación de fotones Cherenkov dentro del detector.
-* Modelar la detección de fotones mediante un fotomultiplicador (PMT).
-* Analizar los tiempos de llegada y las características de los fotones detectados.
-* Reconstruir la señal temporal producida por el PMT.
-* Estudiar la respuesta del PMT ante los eventos simulados.
-* Reconstruir y analizar el espectro de energía de los electrones de Michel.
-* Caracterizar las propiedades de la señal obtenida.
+The project combines **particle physics simulation, data processing, and scientific data analysis**, primarily using Geant4, ROOT, and Python.
 
 ---
 
-## Simulación del detector
+## Objectives
 
-La simulación se desarrolla utilizando **[Geant4](https://geant4.web.cern.ch/)**, un framework utilizado para simular el transporte e interacción de partículas con la materia.
+The main objectives of this project are:
 
-El detector está basado en un **cristal de plomo** con propiedades ópticas adecuadas para la producción y propagación de radiación Cherenkov.
-
-Dentro de la simulación se consideran procesos físicos relevantes como:
-
-* Producción de radiación Cherenkov.
-* Absorción de fotones.
-* Dispersión Rayleigh.
-* Reflexión en las superficies del detector.
-* Transporte óptico de los fotones.
-* Detección de fotones por el PMT.
-
-El objetivo es obtener información detallada de cada evento, incluyendo las partículas involucradas y los fotones que alcanzan la superficie de detección.
+* Simulate particle interactions within a lead glass Cherenkov detector.
+* Study the production and propagation of Cherenkov photons inside the detector.
+* Model photon detection using a photomultiplier tube (PMT).
+* Analyze the arrival times and characteristics of detected photons.
+* Reconstruct the temporal signal produced by the PMT.
+* Study the PMT response to simulated events.
+* Reconstruct and analyze the energy spectrum of Michel electrons.
+* Characterize the properties of the resulting signal.
 
 ---
 
-## Muones y electrones de Michel
+## Detector Simulation
 
-Una parte fundamental de la simulación consiste en estudiar **muones que atraviesan el detector y posteriormente se desintegran**.
+The simulation is developed using **[Geant4](https://geant4.web.cern.ch/)**, a framework widely used to simulate the transport and interaction of particles with matter.
 
-El proceso de interés es:
+The detector is based on a **lead glass crystal** with optical properties suitable for the production and propagation of Cherenkov radiation.
+
+The simulation includes relevant physical processes such as:
+
+* Cherenkov radiation production.
+* Photon absorption.
+* Rayleigh scattering.
+* Reflection at detector surfaces.
+* Optical photon transport.
+* Photon detection by the PMT.
+
+The objective is to obtain detailed information from each event, including the particles involved and the photons reaching the detection surface.
+
+---
+
+## Muons and Michel Electrons
+
+A fundamental part of the simulation consists of studying **muons that pass through the detector and subsequently decay**.
+
+The process of interest is:
 
 $$
 \mu^- \rightarrow e^- + \nu_\mu + \bar{\nu}_e
 $$
 
-El electrón producido en esta desintegración se conoce como **electrón de Michel**.
+The electron produced in this decay is known as a **Michel electron**.
 
-La energía de estos electrones sigue una distribución característica, conocida como **espectro de Michel**.
+These electrons follow a characteristic energy distribution known as the **Michel spectrum**.
 
-El objetivo del análisis es estudiar cómo esta distribución física se transforma en una señal observable después de pasar por:
+The goal of the analysis is to study how this physical distribution is transformed into an observable signal after passing through:
 
 $$
-\text{Partícula}
+\text{Particle}
 \rightarrow
-\text{Cristal Cherenkov}
+\text{Cherenkov Crystal}
 \rightarrow
-\text{Fotones}
+\text{Photons}
 \rightarrow
 \text{PMT}
 \rightarrow
-\text{Señal eléctrica}
+\text{Electrical Signal}
 $$
 
 ---
 
-## Fotomultiplicador
+## Photomultiplier Tube
 
-El detector utiliza como referencia un **Hamamatsu R1512**, utilizado para convertir los fotones Cherenkov detectados en una señal eléctrica.
+The detector uses a **Hamamatsu R1512** as the reference PMT, which converts detected Cherenkov photons into an electrical signal.
 
-La simulación y el análisis consideran las características relevantes del PMT, incluyendo:
+The simulation and analysis take into account relevant PMT characteristics, including:
 
-* Eficiencia cuántica.
-* Ganancia.
-* Tiempo de tránsito.
-* Tiempo de subida.
-* Respuesta temporal.
-* Carga asociada a un fotoelectrón.
+* Quantum efficiency.
+* Gain.
+* Transit time.
+* Rise time.
+* Temporal response.
+* Single-photoelectron charge.
 
-A partir de los fotones detectados se construye una representación de la señal temporal producida por el PMT.
+The detected photons are used to construct a representation of the temporal signal produced by the PMT.
 
 ---
 
-## Análisis de datos
+## Data Analysis
 
-Los datos generados por Geant4 son almacenados y posteriormente procesados para extraer las variables relevantes de cada evento.
+The data generated by Geant4 are stored and subsequently processed to extract relevant variables from each simulated event.
 
-El análisis combina **ROOT** y **Python**, utilizando herramientas como:
+The analysis combines **ROOT** and **Python**, using tools such as:
 
 * NumPy
 * Pandas
@@ -105,144 +105,145 @@ El análisis combina **ROOT** y **Python**, utilizando herramientas como:
 * Awkward Array
 * ROOT
 
-El flujo general de análisis es:
+The general analysis workflow is:
 
 ```text
 Geant4
    │
    ▼
-Simulación de eventos
+Event Simulation
    │
    ▼
-Producción y transporte de fotones
+Photon Production and Transport
    │
    ▼
-Fotones detectados por el PMT
+Photons Detected by the PMT
    │
    ▼
-Extracción de datos
+Data Extraction
    │
    ├── ROOT
    └── Python
           │
           ▼
-   Procesamiento de datos
+   Data Processing
           │
           ▼
-   Análisis temporal
+   Temporal Analysis
           │
           ▼
-   Reconstrucción de la señal
+   Signal Reconstruction
           │
           ▼
-   Caracterización del PMT
+   PMT Characterization
 ```
 
 ---
 
-## Reconstrucción de la señal
+## Signal Reconstruction
 
-Uno de los pasos principales del análisis consiste en transformar la información de los fotones detectados en una señal temporal representativa del PMT.
+One of the main steps of the analysis consists of transforming the detected photon information into a representative temporal signal from the PMT.
 
-Para ello se estudian los tiempos de llegada de los fotones y se identifican las diferentes contribuciones temporales correspondientes a los eventos simulados.
+The arrival times of the detected photons are analyzed in order to identify the different temporal contributions associated with the simulated events.
 
-Posteriormente, se utiliza una respuesta de **Single Photoelectron (SPE)** para modelar la contribución individual de los fotoelectrones.
+A **Single Photoelectron (SPE)** response is then used to model the individual contribution of photoelectrons.
 
-La señal total puede representarse conceptualmente como la convolución entre la distribución temporal de los fotones detectados y la respuesta del PMT:
+The total signal can be conceptually represented as the convolution between the temporal distribution of the detected photons and the PMT response:
 
 $$
 S(t) = N_{\gamma}(t) * R_{\mathrm{SPE}}(t)
 $$
 
-donde:
+where:
 
-- $N_{\gamma}(t)$ representa la distribución temporal de fotones detectados.
-- $R_{\mathrm{SPE}}(t)$ representa la respuesta del PMT a un fotoelectrón.
-- $S(t)$ representa la señal reconstruida.
-Este procedimiento permite pasar de información discreta de fotones a una señal temporal continua que puede ser analizada.
+* $N_{\gamma}(t)$ represents the temporal distribution of detected photons.
+* $R_{\mathrm{SPE}}(t)$ represents the PMT response to a single photoelectron.
+* $S(t)$ represents the reconstructed signal.
 
----
-
-## Resultados
-
-El resultado principal del proyecto es la **caracterización de la señal producida por el PMT** a partir de los eventos simulados.
-
-El análisis permite estudiar cómo las características del evento físico y de los fotones producidos en el cristal se reflejan en la señal final del fotomultiplicador.
-
-Entre las variables analizadas se encuentran:
-
-* Número de fotones detectados.
-* Distribución temporal de los fotones.
-* Número de fotoelectrones.
-* Forma temporal de la señal.
-* Carga integrada de la señal.
-* Respuesta del PMT.
-* Relación entre la energía depositada y la señal obtenida.
+This procedure allows discrete photon information to be transformed into a continuous temporal signal that can be further analyzed.
 
 ---
 
-## Tecnologías utilizadas
+## Results
 
-| Tecnología        | Uso                                                   |
-| ----------------- | ----------------------------------------------------- |
-| **C++**           | Desarrollo de la simulación                           |
-| **Geant4**        | Simulación del transporte e interacción de partículas |
-| **ROOT**          | Almacenamiento y análisis de datos                    |
-| **Python**        | Procesamiento y análisis científico                   |
-| **NumPy**         | Cálculo numérico                                      |
-| **Pandas**        | Manipulación de datos                                 |
-| **Matplotlib**    | Visualización                                         |
-| **SciPy**         | Procesamiento y análisis numérico                     |
-| **Uproot**        | Lectura de archivos ROOT desde Python                 |
-| **Awkward Array** | Manipulación de datos estructurados de eventos        |
+The main result of this project is the **characterization of the signal produced by the PMT** from the simulated events.
+
+The analysis allows the study of how the characteristics of the physical event and the photons produced within the crystal are reflected in the final photomultiplier signal.
+
+The analyzed quantities include:
+
+* Number of detected photons.
+* Photon arrival-time distribution.
+* Number of photoelectrons.
+* Temporal signal shape.
+* Integrated signal charge.
+* PMT response.
+* Relationship between deposited energy and the resulting signal.
 
 ---
 
-## Estructura del proyecto
+## Technologies Used
+
+| Technology        | Purpose                                       |
+| ----------------- | --------------------------------------------- |
+| **C++**           | Simulation development                        |
+| **Geant4**        | Particle transport and interaction simulation |
+| **ROOT**          | Data storage and analysis                     |
+| **Python**        | Scientific data processing and analysis       |
+| **NumPy**         | Numerical computing                           |
+| **Pandas**        | Data manipulation                             |
+| **Matplotlib**    | Data visualization                            |
+| **SciPy**         | Numerical processing and analysis             |
+| **Uproot**        | Reading ROOT files in Python                  |
+| **Awkward Array** | Manipulation of structured event data         |
+
+---
+
+## Project Structure
 
 ```text
-Proyecto-de-grado---cristal-de-plomo/
+Project-de-grado---lead-glass/
 │
 ├── Crystalg4/
-   └── Código de simulación Geant4
-      │
-      ├── analysis/
-      │   └── Scripts de análisis en Python
-      │
-      ├── data/
-      │   └── Datos generados por las simulaciones
-      │
-      ├── results/
-      │   └── Gráficos y resultados del análisis
-      │
+│   └── Geant4 simulation code
+│       │
+│       ├── analysis/
+│       │   └── Python analysis scripts
+│       │
+│       ├── data/
+│       │   └── Simulation-generated data
+│       │
+│       ├── results/
+│       │   └── Analysis plots and results
+│       │
 ├── README.md
 └── ...
 ```
 
 ---
 
-## Motivación
+## Motivation
 
-Este proyecto integra diferentes áreas de la física computacional y el análisis de datos:
+This project integrates several areas of computational physics and data analysis:
 
-**Física de partículas → Simulación Monte Carlo → Generación de datos → Procesamiento → Análisis estadístico → Reconstrucción de señales**
+**Particle Physics → Monte Carlo Simulation → Data Generation → Data Processing → Statistical Analysis → Signal Reconstruction**
 
-Además de estudiar el comportamiento físico del detector, el proyecto proporciona un flujo completo de trabajo con datos científicos simulados, desde su generación hasta la extracción de información física.
+In addition to studying the physical behavior of the detector, the project provides a complete workflow for working with simulated scientific data, from data generation to the extraction of meaningful physical information.
 
 ---
 
-## Autor
+## Author
 
 **Sergio Villalba**
 
-Proyecto de grado — Física
+Undergraduate Thesis — Physics
 
-### Áreas de interés
+### Areas of Interest
 
 * Data Science
 * Scientific Computing
 * Machine Learning
-* Física de partículas
-* Simulación Monte Carlo
-* Análisis de datos científicos
-* Detectores de partículas
+* Particle Physics
+* Monte Carlo Simulation
+* Scientific Data Analysis
+* Particle Detectors
