@@ -156,10 +156,9 @@ $$
 
 donde:
 
-* (N_{\gamma}(t)) representa la distribución temporal de fotones detectados.
-* (R_{\mathrm{SPE}}(t)) representa la respuesta del PMT a un fotoelectrón.
-* (S(t)) representa la señal reconstruida.
-
+- $N_{\gamma}(t)$ representa la distribución temporal de fotones detectados.
+- $R_{\mathrm{SPE}}(t)$ representa la respuesta del PMT a un fotoelectrón.
+- $S(t)$ representa la señal reconstruida.
 Este procedimiento permite pasar de información discreta de fotones a una señal temporal continua que puede ser analizada.
 
 ---
