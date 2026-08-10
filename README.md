@@ -201,20 +201,20 @@ Entre las variables analizadas se encuentran:
 ## Estructura del proyecto
 
 ```text
-cristal/
+Proyecto-de-grado---cristal-de-plomo/
 │
-├── simulation/
-│   └── Código de simulación Geant4
-│
-├── analysis/
-│   └── Scripts de análisis en Python
-│
-├── data/
-│   └── Datos generados por las simulaciones
-│
-├── results/
-│   └── Gráficos y resultados del análisis
-│
+├── Crystalg4/
+   └── Código de simulación Geant4
+      │
+      ├── analysis/
+      │   └── Scripts de análisis en Python
+      │
+      ├── data/
+      │   └── Datos generados por las simulaciones
+      │
+      ├── results/
+      │   └── Gráficos y resultados del análisis
+      │
 ├── README.md
 └── ...
 ```
