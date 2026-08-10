@@ -60,7 +60,7 @@ La energía de estos electrones sigue una distribución característica, conocid
 
 El objetivo del análisis es estudiar cómo esta distribución física se transforma en una señal observable después de pasar por:
 
-[
+$$
 \text{Partícula}
 \rightarrow
 \text{Cristal Cherenkov}
@@ -70,7 +70,7 @@ El objetivo del análisis es estudiar cómo esta distribución física se transf
 \text{PMT}
 \rightarrow
 \text{Señal eléctrica}
-]
+$$
 
 ---
 
