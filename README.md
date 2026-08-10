@@ -50,9 +50,9 @@ Una parte fundamental de la simulación consiste en estudiar **muones que atravi
 
 El proceso de interés es:
 
-[
+$$
 \mu^- \rightarrow e^- + \nu_\mu + \bar{\nu}_e
-]
+$$
 
 El electrón producido en esta desintegración se conoce como **electrón de Michel**.
 
