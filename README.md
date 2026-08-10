@@ -150,9 +150,9 @@ Posteriormente, se utiliza una respuesta de **Single Photoelectron (SPE)** para 
 
 La señal total puede representarse conceptualmente como la convolución entre la distribución temporal de los fotones detectados y la respuesta del PMT:
 
-[
+$$
 S(t) = N_{\gamma}(t) * R_{\mathrm{SPE}}(t)
-]
+$$
 
 donde:
 
